@@ -28,7 +28,18 @@
               </td>
               <td>{{ data.products.nama }}</td>
               <td>{{ data.keterangan }}</td>
-              <td class="text-right">{{ data.jumlah_pemesanan }}</td>
+              <!-- <td class="text-right">{{ data.jumlah_pemesanan }}</td> -->
+              <td>
+                <div class="form-group">
+                  <input
+                    type="number"
+                    class="form-control"
+                    v-model="data.jumlah_pemesanan"
+                    style="max-width: 100px"
+                    min="0"
+                  />
+                </div>
+              </td>
               <td class="text-right">{{ currency(data.products.harga) }}</td>
               <td class="text-right">
                 {{
@@ -83,7 +94,7 @@
 </template>
 
 <script>
-import services from "../services";
+import services from "../services/services";
 import formatter from "../formatter/formatter";
 
 export default {

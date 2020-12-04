@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div class="container">
-      <Header />
+      <Header v-if="isLoggedIn" />
       <router-view />
     </div>
     <Footer />
@@ -14,6 +14,11 @@ import Footer from "./components/Footer";
 
 export default {
   components: { Header, Footer },
+  computed: {
+    isLoggedIn() {
+      return this.$store.state.user?.accessToken
+    }
+  }
 };
 </script>
 

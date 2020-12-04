@@ -29,7 +29,7 @@
 
 <script>
 import Food from "../components/Food";
-import services from "../services";
+import services from "../services/services";
 
 export default {
   name: "Menu",
@@ -45,7 +45,6 @@ export default {
   },
   methods: {
     getAllFoods() {
-      console.log('changed')
       services.getAllFoods(this.keyword).then((res) => {
         this.foodList = res.data;
       });

@@ -1,4 +1,16 @@
 {
+  "users": [
+    {
+      "email": "hafizh@mail.com",
+      "password": "$2a$10$k6DG9gW5nR.5xzlGNt81ruAKd2YijN2K0GGBYT0ieO0EHQQPy4JTG",
+      "id": 1
+    },
+    {
+      "email": "george@mail.com",
+      "password": "$2a$10$EeME9GReBjczH6pBez65bepa4cXT7uqPXsBUqANKI88FtbfrGuwgK",
+      "id": 2
+    }
+  ],
   "best-products": [
     {
       "id": 1,
@@ -233,6 +245,39 @@
         }
       ],
       "id": 6
+    },
+    {
+      "nama": "george",
+      "noMeja": "1",
+      "cart": [
+        {
+          "jumlah_pemesanan": "1",
+          "keterangan": "",
+          "products": {
+            "id": 1,
+            "kode": "K-01",
+            "nama": "Sate Ayam",
+            "harga": 16000,
+            "is_ready": true,
+            "gambar": "sate-ayam.jpg"
+          },
+          "id": 1
+        },
+        {
+          "jumlah_pemesanan": "2",
+          "keterangan": "pedes",
+          "products": {
+            "id": 2,
+            "kode": "K-02",
+            "nama": "Nasi Goreng Telur",
+            "harga": 14000,
+            "is_ready": true,
+            "gambar": "nasi-goreng-telor.jpg"
+          },
+          "id": 2
+        }
+      ],
+      "id": 7
     }
   ]
 }

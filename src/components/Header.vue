@@ -49,7 +49,7 @@
 </template>
 
 <script>
-import services from "../services";
+import services from "../services/services";
 
 export default {
   name: "Header",

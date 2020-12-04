@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import services from "../services";
+import services from "../services/services";
 import Food from "./Food";
 
 export default {

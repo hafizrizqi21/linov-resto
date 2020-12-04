@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+import store from '../store/index'
 
 Vue.use(VueRouter)
 
@@ -8,22 +9,28 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: Home
+    component: Home,
+
   },
   {
-    path: '/about',
-    name: 'About',
-    component: () => import('../views/About.vue')
+    path: '/login',
+    name: 'Login',
+    component: () => import('../views/Login.vue')
+  },
+  {
+    path: '/register',
+    name: 'Register',
+    component: () => import('../views/Register.vue')
   },
   {
     path: '/menu',
     name: 'Menu',
-    component: () => import('../views/Menu.vue')
+    component: () => import('../views/Menu.vue'),
   },
   {
     path: '/cart',
     name: 'Cart',
-    component: () => import('../views/Cart.vue')
+    component: () => import('../views/Cart.vue'),
   },
   {
     path: '/detail/:id',
@@ -39,6 +46,11 @@ const routes = [
 
 const router = new VueRouter({
   routes
+})
+
+router.beforeEach((to, from, next) => {
+  if (to.name !== 'Login' && to.name !== 'Register' && !store.state.user.accessToken) next({ name: 'Login' })
+  else next()
 })
 
 export default router

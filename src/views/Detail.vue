@@ -59,7 +59,7 @@
 
 <script>
 import formatter from '../formatter/formatter';
-import services from "../services";
+import services from "../services/services";
 
 export default {
   name: "Detail",
